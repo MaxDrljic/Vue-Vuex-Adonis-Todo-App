@@ -15,6 +15,9 @@
 
 const Route = use('Route')
 
-Route.get('/', ({ request }) => {
-  return { greeting: 'Hello world in JSON' }
+// Using http requests with controller, instead of declaring everything in routes.js
+Route.group(() => {
+  Route.post('auth/register', 'UserController.register');
 })
+  .prefix('api');
+
