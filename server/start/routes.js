@@ -18,6 +18,7 @@ const Route = use('Route')
 // Using http requests with controller, instead of declaring everything in routes.js
 Route.group(() => {
   Route.post('auth/register', 'UserController.register');
+  Route.post('auth/login', 'UserController.login');
 })
   .prefix('api');
 
