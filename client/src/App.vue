@@ -7,12 +7,23 @@
       </div>
       <router-view/>
     </div>
-  </v-app>  
+  </v-app>
 </template>
+
+<script>
+/* eslint-disable */
+import Toolbar from "@/components/Toolbar.vue";
+export default {
+  components: {
+    Toolbar
+  }
+};
+</script>
+
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
