@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -22,13 +24,10 @@
     "@vue/cli-plugin-eslint": "^3.0.0-beta.14",
     "@vue/cli-service": "^3.0.0-beta.14",
     "@vue/eslint-config-airbnb": "^3.0.0-beta.14",
+    "eslint-config-prettier": "^2.9.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.16"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
