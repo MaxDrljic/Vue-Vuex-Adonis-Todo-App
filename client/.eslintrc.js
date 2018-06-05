@@ -9,6 +9,7 @@ module.exports = {
     '@vue/airbnb',
   ],
   rules: {
+    /* 'consistent-return': 'off', */
     'no-param-reassign': 'off',
     'quotes': ['error', 'double'],
     'comma-dangle': ['error', 'never'],
