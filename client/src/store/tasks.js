@@ -10,19 +10,19 @@ export default {
   },
   actions: {
     saveTask({ commit }, task) {
-      return HTTP().patch(`/tasks/${task.id}`, task)
+      return HTTP().patch(`tasks/${task.id}`, task)
         .then(() => {
           commit("unsetEditMode", task);
         });
     },
     deleteTask({ commit }, task) {
-      return HTTP().delete(`/tasks/${task.id}`)
+      return HTTP().delete(`tasks/${task.id}`)
         .then(() => {
           commit("removeTask", task);
         });
     },
     fetchTasksForProject({ commit }, project) {
-      return HTTP().get(`/projects/${project.id}/tasks`)
+      return HTTP().get(`projects/${project.id}/tasks`)
         .then(({ data }) => {
           commit("setTasks", data);
         });
@@ -60,6 +60,9 @@ export default {
     },
     removeTask(state, task) {
       state.tasks.splice(state.tasks.indexOf(task), 1);
+    },
+    toggleCompleted(state, task) {
+      task.completed = !task.completed;
     }
   }
 };
